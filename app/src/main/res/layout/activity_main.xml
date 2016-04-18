@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -21,154 +22,27 @@
         android:autoText="false"
         android:textColor="@color/colorPrimaryText" />
 
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/titleTextView"
-        android:layout_toLeftOf="@+id/titleTextView"
-        android:layout_toStartOf="@+id/titleTextView"
-        android:layout_marginTop="35dp"
-        android:id="@+id/tableLayout">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Top Friendsh"
-                android:id="@+id/textView2"
-                android:textSize="20sp"
-                android:textColor="@color/colorSecondaryText" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Friend 1"
-                android:id="@+id/textView3" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Friend 2"
-                android:id="@+id/textView4" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"></TableRow>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Friend 3"
-            android:id="@+id/textView5" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Friend 4"
-                android:id="@+id/textView6" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Friend 5"
-                android:id="@+id/textView7" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Friend 6"
-                android:id="@+id/textView8" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Friend 7"
-                android:id="@+id/textView9" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Friend 8"
-                android:id="@+id/textView10" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Friend 9"
-                android:id="@+id/textView11" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Friend 10"
-                android:id="@+id/textView12" />
-        </TableRow>
-    </TableLayout>
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="New Blog Post"
         android:id="@+id/newBlogPostButton"
-        android:layout_alignBottom="@+id/tableLayout"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginTop="20dp"
+        android:background="@color/colorAccent"
+        android:padding="5dp"
+        android:layout_below="@+id/textView13"
+        android:layout_alignLeft="@+id/blogTitleTextView"
+        android:layout_alignStart="@+id/blogTitleTextView" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Most Recent Blog Post"
         android:id="@+id/textView13"
-        android:layout_alignTop="@+id/tableLayout"
+        android:layout_below="@+id/titleTextView"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="22dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -176,17 +50,92 @@
         android:id="@+id/blogTitleTextView"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:layout_marginTop="87dp"
         android:layout_below="@+id/textView13"
         android:layout_alignLeft="@+id/textView13"
-        android:layout_alignStart="@+id/textView13"
-        android:layout_marginTop="22dp" />
+        android:layout_alignStart="@+id/textView13" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:fillViewport="true"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="250dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/blogContentTextView"
+            android:layout_toRightOf="@+id/titleTextView" />
+
+    </ScrollView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/sloth"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/titleTextView"
+        android:scaleType="fitStart"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2"
+        android:layout_alignBottom="@+id/textView13" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/blogContentTextView"
-        android:layout_below="@+id/blogTitleTextView"
-        android:layout_alignLeft="@+id/blogTitleTextView"
-        android:layout_alignStart="@+id/blogTitleTextView" />
+        android:text="Matt Rosanio"
+        android:id="@+id/textView14"
+        android:layout_below="@+id/imageView"
+        android:layout_alignRight="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/friendsListView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:nestedScrollingEnabled="false"
+        android:layout_above="@+id/addNewFriendButton"
+        android:layout_toLeftOf="@+id/addNewFriendButton"
+        android:layout_toStartOf="@+id/addNewFriendButton"
+        android:layout_marginTop="234dp"
+        android:layout_marginBottom="15dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addNewFriendEditText"
+        android:hint="Add New Friend"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go!"
+        android:id="@+id/addNewFriendButton"
+        android:background="@color/colorAccent"
+        android:maxWidth="100dp"
+        android:width="50dp"
+        android:minWidth="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/addNewFriendEditText"
+        android:layout_toEndOf="@+id/addNewFriendEditText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Friends"
+        android:id="@+id/textView2"
+        android:textSize="25sp"
+        android:layout_below="@+id/newBlogPostButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

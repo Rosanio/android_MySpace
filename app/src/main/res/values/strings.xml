@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MySpace</string>
+    <string name="action_settings">Settings</string>
 </resources>
