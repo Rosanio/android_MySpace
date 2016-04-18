@@ -27,7 +27,8 @@
         android:layout_below="@+id/titleTextView"
         android:layout_toLeftOf="@+id/titleTextView"
         android:layout_toStartOf="@+id/titleTextView"
-        android:layout_marginTop="35dp">
+        android:layout_marginTop="35dp"
+        android:id="@+id/tableLayout">
 
         <TableRow
             android:layout_width="match_parent"
@@ -151,5 +152,41 @@
                 android:id="@+id/textView12" />
         </TableRow>
     </TableLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Blog Post"
+        android:id="@+id/newBlogPostButton"
+        android:layout_alignBottom="@+id/tableLayout"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Most Recent Blog Post"
+        android:id="@+id/textView13"
+        android:layout_alignTop="@+id/tableLayout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/blogTitleTextView"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/textView13"
+        android:layout_alignLeft="@+id/textView13"
+        android:layout_alignStart="@+id/textView13"
+        android:layout_marginTop="22dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/blogContentTextView"
+        android:layout_below="@+id/blogTitleTextView"
+        android:layout_alignLeft="@+id/blogTitleTextView"
+        android:layout_alignStart="@+id/blogTitleTextView" />
 
 </RelativeLayout>
